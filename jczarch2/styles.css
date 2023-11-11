@@ -1,0 +1,217 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable vertical scrolling */
+}
+
+.container-all{
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar{
+    width: 250px;
+    height:100vh;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+#sidebar.active{
+    margin-left:-200px;
+}
+
+.collapse-btn{
+    position:relative;
+    top:1%;
+    left:210px;
+    background-color: black;
+    color: white;
+    border:none;
+    padding:5;
+    font-size:30px;
+}
+
+.collapse-btn:hover{
+    background-color: rgb(85, 87, 88);
+    transition:0.4s;
+}
+
+#sidebar p{
+    text-align:center;
+    font-size:30px;
+    font-style:italic;
+    padding:10px;
+}
+
+#sidebar ul li a{
+    padding:10px;
+    font-size:20px;
+    display:block;
+    text-decoration:none;
+    color: white;
+}
+
+#sidebar ul li a:hover{
+    color:black;
+    background: white;
+}
+
+.fa-light,
+.fa-thin{
+    float: right;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative; /* 将 .container 设为相对定位，以容纳绝对定位的元素 */
+    background-color: black;
+}
+
+ul ul li a{
+    background-color: rgb(58, 53, 53);
+    font-size:20px;
+    font-style:italic;
+}
+
+@media(max-width:600px){
+    #sidebar{
+        margin-left:-100px;
+        width:150px;
+        font-size:20px;
+    }
+    .collapse-btn{
+        position:relative;
+        top:1%;
+        left:110px;
+    }
+    #sidebar.active{
+        margin-left: 0px;
+    }
+    #sidebar ul p{
+        font-size: 15px;
+        text-align:left;
+    }
+}
+.contant-container{
+    background-color: black;
+    width:100%;
+    height:100vh;
+}
+
+.top-title {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    position: relative; /* 将 .title 设为绝对定位 */
+    top: 80px; /* 放置在容器顶部 */
+    left: 0; /* 放置在容器左侧 */
+    right: 0; /* 放置在容器右侧 */
+    z-index: 1;
+}
+
+.top-title img {
+    max-width: 100%; /* 确保图片不超出容器宽度 */
+    max-height: 100px; /* 调整图片的最大高度，根据需要修改 */
+    height: auto; /* 保持原始图片纵横比 */
+    position: relative;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(70vh - 20px); /* 这里不再加额外高度 */
+    margin-top: 10px;
+}
+
+
+.right:hover video{
+    filter:blur(5px);
+}
+
+.left:hover video{
+    filter:blur(5px);
+}
+
+.middle:hover video{
+    filter:blur(10px);
+}
+
+.left,
+.middle,
+.right {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 800px; /* 调整这里的高度以直接影响视频大小 */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.description-box {
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: absolute;
+    top: 120%; 
+    left: 50%;
+    border: 80px;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    height:1100px;
+}
+
+.description-box a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    opacity: 0;
+    font-size: 80px;
+    font-style: italic;
+}
+
+.right:hover .description-box a{
+    text-decoration: none;
+    opacity: 1;
+}
+
+.left:hover .description-box a{
+    text-decoration: none;
+    opacity: 1;
+}
+
+.middle:hover .description-box a{
+    text-decoration: none;
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .box {
+        flex-direction: column; /* Stack videos vertically on small screens */
+    }
+
+    .left,
+    .middle,
+    .right {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
