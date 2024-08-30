@@ -1,0 +1,109 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url('../../media/images/equipment-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container-all {
+    min-height: 100vh; 
+    display: flex;
+    align-items: stretch;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    transition: margin-left 1s;
+}
+
+.content-container.sidebar-active {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+}
+
+.top-title {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: 0;
+    bottom: 5%;
+    height: 20vh;
+    flex-shrink: 0;
+    background-color: black;
+}
+
+.top-title img {
+    max-width: 50%;
+    max-height: 100%;
+    height: auto;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    width: 30vw;
+    height: 20vh;
+    /* aspect-ratio: 1; */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+}
+
+.description-box a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: calc(12px + 1vw);
+    font-style: italic;
+}
+
+.description-box a:hover {
+    color: lightgray;
+}
+
+.description-box h2 {
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .content-container {
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+
+    .content-container.sidebar-active {
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+
+    .box-container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 30vw;
+        height: 20vh;
+        /* aspect-ratio: 1; */
+    }
+}
