@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <title>JCZ ARCH</title>
+    <link rel="shortcut icon" href="media/images/jcz-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Home - JCZ ARCH</title>
 </head>
 <body>
 
 <div class="container-all">
-    <div class="nav-container">
+    <div id="nav-container">
         <nav id="sidebar">
             <button type="button" id="collapse" class="collapse-btn">
                 <i class="fa fa-light fa-align-left"></i>
@@ -25,13 +27,13 @@
                     <a href="index.html">HOME <i class="fa fa-light fa-house-chimney"></i> </a>
                 </li>
                 <li>
-                    <a href="#sublist" data-bs-toggle="collapse" id="dropdown">BUSINESS </i><i class="fa fa-thin fa-certificate"></i></a>
+                    <a href="#sublist" data-bs-toggle="collapse" id="dropdown">BUSINESS <i class="fa fa-thin fa-certificate"></i></a>
                     <ul id="sublist" class="list-unstyled collapse">
                         <li>
-                            <a href="http://www.atequips.com/">Equipments</a>
+                            <a href="equipment.html">Equipments</a>
                         </li>
                         <li>
-                            <a href="#">Architecture</a>
+                            <a href="arch.html">Architecture</a>
                         </li>
                         <li>
                             <a href="supplies.html">Supplies</a>
@@ -47,37 +49,39 @@
             </ul>
         </nav>
     </div>
-    <div class="contant-container">
+
+    <div class="content-container">
         <div class="top-title">
-            <img src="jcz.jpg">
+            <img src="media/images/jcz-logo.jpg" alt="JCZ ARCH Logo">
         </div>
         <div class="box">
             <div class="left">
                 <video autoplay loop muted>
-                    <source src="Vequi.mp4">
+                    <source src="media/videos/Vequi.webm" type="video/webm">
                 </video>
                 <div class="description-box">
-                    <a href="http://www.atequips.com/">Equipments</a>
+                    <a href="equipment.html">Equipments</a>
                 </div>
             </div>
             <div class="middle">
                 <video autoplay loop muted>
-                    <source src="Varch.mp4">
+                    <source src="media/videos/Varch.webm" type="video/webm">
                 </video>
                 <div class="description-box">
-                    <a href="#">Architecture</a>
+                    <a href="arch.html">Architecture</a>
                 </div>
             </div>
             <div class="right">
                 <video autoplay loop muted>
-                    <source src="Vsup.mp4">
+                    <source src="media/videos/Vsup.webm" type="video/webm">
                 </video>
                 <div class="description-box">
                     <a href="supplies.html">Supplies</a>
                 </div>
             </div>
-        </div>
-
-       
+        </div>   
     </div>
 </div>
+
+</body>
+</html>
